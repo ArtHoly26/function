@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <ctime>
 
 using namespace std;
@@ -24,7 +24,7 @@ int main()
 
 	FillRand(arr, size);
 	Print(arr, size);
-	cout << "Ñóììà ìàññèâà ðàâíà:" << Sum(arr, size) << endl;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° Ð¼Ð°ÑÑÐ¸Ð²Ð° Ñ€Ð°Ð²Ð½Ð°:" << Sum(arr, size) << endl;
 	Avg(arr, size);
 	Search(arr, size);
 	minValueIn(arr, size);
@@ -58,7 +58,7 @@ void Avg(int arr[], int size)
 {
 	double avg;
 	avg = Sum(arr, size) / size;
-	cout << "Ñðåäíåå àðèôìåòè÷åñêîå ýëåìåíòîâ ìàññèâà ðàâíî:" << avg << endl;
+	cout << "Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð° Ñ€Ð°Ð²Ð½Ð¾:" << avg << endl;
 }
 
 void minValueIn(int arr[], int size)
@@ -66,7 +66,7 @@ void minValueIn(int arr[], int size)
 	int min = arr[0];
 	for (int i = 0; i < size; i++) if (min > arr[i]) min = arr[i];
 
-	cout << "Ìèíèìàëüíûé ýëåìåíò â ìàññèâå:" << min << endl;
+	cout << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ:" << min << endl;
 }
 
 void maxValuenIn(int arr[], int size)
@@ -74,10 +74,10 @@ void maxValuenIn(int arr[], int size)
 	int max = arr[0];
 	for (int i = 0; i < size; i++) if (max < arr[i]) max = arr[i];
 
-	cout << "Ìàêñèìàëüíûé ýëåìåíò â ìàññèâå:" << max << endl;
+	cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ:" << max << endl;
 }
 
-void Sort(int arr[], int size)    // Îòñîðòèðîâàí ìåòîäîì ïðÿìîé ñîðòèðîâêè ïî âîçðàñòàíèþ
+void Sort(int arr[], int size)    // ÐžÑ‚ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½ Ð¼ÐµÑ‚Ð¾Ð´Ð¾Ð¼ Ð¿Ñ€ÑÐ¼Ð¾Ð¹ ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ¸ Ð¿Ð¾ Ð²Ð¾Ð·Ñ€Ð°ÑÑ‚Ð°Ð½Ð¸ÑŽ
 {
 	int buffer;
 	int min;
@@ -99,7 +99,7 @@ void shiftLeft(int arr[], int size)
 {
 
 	int on_Left;
-	cout << "Íà ñêîëüêî åäåíèö íåîáõîäèìî ñäâèíóòü ìàññèâ âëåâî?" << endl;
+	cout << "ÐÐ° ÑÐºÐ¾Ð»ÑŒÐºÐ¾ ÐµÐ´ÐµÐ½Ð¸Ñ† Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ ÑÐ´Ð²Ð¸Ð½ÑƒÑ‚ÑŒ Ð¼Ð°ÑÑÐ¸Ð² Ð²Ð»ÐµÐ²Ð¾?" << endl;
 	cin >> on_Left;
 	for (int i = 0; i < on_Left; i++)
 	{
@@ -116,7 +116,7 @@ void shiftLeft(int arr[], int size)
 void shiftRight(int arr[], int size)
 {
 	int on_Right;
-	cout << "Íà ñêîëüêî åäåíèö íåîáõîäèìî ñäâèíóòü ìàññèâ âïðàâî?" << endl;
+	cout << "ÐÐ° ÑÐºÐ¾Ð»ÑŒÐºÐ¾ ÐµÐ´ÐµÐ½Ð¸Ñ† Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ ÑÐ´Ð²Ð¸Ð½ÑƒÑ‚ÑŒ Ð¼Ð°ÑÑÐ¸Ð² Ð²Ð¿Ñ€Ð°Ð²Ð¾?" << endl;
 	cin >> on_Right;
 	for (int i = 0; i < on_Right; i++)
 	{
@@ -135,9 +135,9 @@ void UniqueRand(int brr[], int size)
 	srand(time(NULL));
 	int end;
 	int begin;
-	cout << "Ââåäèòå íà÷àëî äèàïàçîíà:";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ñ‡Ð°Ð»Ð¾ Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½Ð°:";
 	cin >> begin;
-	cout << "Ââåäèòå êîíåö äèàïàçîíà:";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð½ÐµÑ† Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½Ð°:";
 	cin >> end;
 	for (int i = 0; i < size; i++) brr[i] = begin + rand() % (end - begin + 1);
 	Print(brr, size);
@@ -159,5 +159,5 @@ void Search(int arr[], int size)
 			}
 		}
 	}
-	cout << "Êîëëè÷åñòâî ïîâòîðåíèé:" << score << endl;
+	cout << "ÐšÐ¾Ð»Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€ÐµÐ½Ð¸Ð¹:" << score << endl;
 }
