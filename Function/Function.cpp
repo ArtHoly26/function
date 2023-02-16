@@ -5,10 +5,10 @@ using namespace std;
 
 void FillRand(int arr[], int size);
 void Print(int arr[], int size);
-int Sum(int arr[], int size);
-void Avg(int arr[], int size);
-void minValueIn(int arr[], int size);
-void maxValuenIn(int arr[], int size);
+double Sum(int arr[], int size);
+double Avg(int arr[], int size);
+int minValueIn(int arr[], int size);
+int maxValuenIn(int arr[], int size);
 void Sort(int arr[], int size);
 void shiftLeft(int arr[], int size);
 void shiftRight(int arr[], int size);
@@ -25,10 +25,10 @@ int main()
 	FillRand(arr, size);
 	Print(arr, size);
 	cout << "Сумма массива равна:" << Sum(arr, size) << endl;
-	Avg(arr, size);
+	cout << "Среднее арефметическое равно:" << Avg(arr, size) << endl;
 	Search(arr, size);
-	minValueIn(arr, size);
-	maxValuenIn(arr, size);
+	cout << "Минимальный элемент:" << minValueIn(arr, size) << endl;
+	cout << "Максимвльный элемент:" << maxValuenIn(arr, size) << endl;
 	Sort(arr, size);
 	shiftLeft(arr, size);
 	shiftRight(arr, size);
@@ -47,34 +47,34 @@ void Print(int arr[], int size)
 	cout << "\n";
 }
 
-int Sum(int arr[], int size)
+double Sum(int arr[], int size)
 {
-	int summa = 0;
+	double summa = 0;
 	for (int i = 0; i < size; i++) summa += arr[i];
 	return summa;
 }
 
-void Avg(int arr[], int size)
+double Avg(int arr[], int size)
 {
 	double avg;
 	avg = Sum(arr, size) / size;
-	cout << "Среднее арифметическое элементов массива равно:" << avg << endl;
+	return avg;
 }
 
-void minValueIn(int arr[], int size)
+int minValueIn(int arr[], int size)
 {
 	int min = arr[0];
 	for (int i = 0; i < size; i++) if (min > arr[i]) min = arr[i];
 
-	cout << "Минимальный элемент в массиве:" << min << endl;
+	return min;;
 }
 
-void maxValuenIn(int arr[], int size)
+int maxValuenIn(int arr[], int size)
 {
 	int max = arr[0];
 	for (int i = 0; i < size; i++) if (max < arr[i]) max = arr[i];
 
-	cout << "Максимальный элемент в массиве:" << max << endl;
+	return max;
 }
 
 void Sort(int arr[], int size)    // Отсортирован методом прямой сортировки по возрастанию
@@ -148,11 +148,11 @@ void Search(int arr[], int size)
 	int score = 0;
 	for (int i = 0; i < size; i++)
 	{
-		int boffer = arr[i];
+		int buffer = arr[i];
 
 		for (int j = i + 1; j < size; j++)
 		{
-			if (boffer == arr[j])
+			if (buffer == arr[j])
 			{
 				cout << arr[j] << endl;
 				score++;
