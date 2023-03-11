@@ -473,17 +473,20 @@ void Sort(char arr[], int const size)
 }
 void Sort(int crr[rows][cols], int const rows, int const cols)
 {
-	for (int k = 0; k < rows; k++)
+	for (int i = 0; i < rows; i++)
 	{
-		for (int i = 0; i < cols; i++)
+		for (int j = 0; j < cols; j++)
 		{
-			for (int j = cols - 1; j > i; j--)
+			for (int k = i; k <rows; k++)
 			{
-				if (crr[k][j] < crr[k][j-1])
+				for (int l = k == i ? j + 1 : 0; l < cols; l++)
 				{
-					int buffer = crr[k][j];
-					crr[k][j] = crr[k][j - 1];
-					crr[k][j - 1] = buffer;
+					if (crr[k][l] < crr[i][j])
+					{
+						int buffer = crr[i][j];
+						crr[i][j] = crr[k][l];
+						crr[k][l] = buffer;
+					}
 				}
 			}
 		}
@@ -492,17 +495,20 @@ void Sort(int crr[rows][cols], int const rows, int const cols)
 }
 void Sort(double crr[rows][cols], int const rows, int const cols)
 {
-	for (int k = 0; k < rows; k++)
+	for (int i = 0; i < rows; i++)
 	{
-		for (int i = 0; i < cols; i++)
+		for (int j = 0; j < cols; j++)
 		{
-			for (int j = cols - 1; j > i; j--)
+			for (int k = i; k < rows; k++)
 			{
-				if (crr[k][j] < crr[k][j - 1])
+				for (int l = k == i ? j + 1 : 0; l < cols; l++)
 				{
-					double buffer = crr[k][j];
-					crr[k][j] = crr[k][j - 1];
-					crr[k][j - 1] = buffer;
+					if (crr[k][l] < crr[i][j])
+					{
+						int buffer = crr[i][j];
+						crr[i][j] = crr[k][l];
+						crr[k][l] = buffer;
+					}
 				}
 			}
 		}
@@ -511,17 +517,20 @@ void Sort(double crr[rows][cols], int const rows, int const cols)
 }
 void Sort(char crr[rows][cols], int const rows, int const cols)
 {
-	for (int k = 0; k < rows; k++)
+	for (int i = 0; i < rows; i++)
 	{
-		for (int i = 0; i < cols; i++)
+		for (int j = 0; j < cols; j++)
 		{
-			for (int j = cols - 1; j > i; j--)
+			for (int k = i; k < rows; k++)
 			{
-				if (crr[k][j] < crr[k][j - 1])
+				for (int l = k == i ? j + 1 : 0; l < cols; l++)
 				{
-					char buffer = crr[k][j];
-					crr[k][j] = crr[k][j - 1];
-					crr[k][j - 1] = buffer;
+					if (crr[k][l] < crr[i][j])
+					{
+						int buffer = crr[i][j];
+						crr[i][j] = crr[k][l];
+						crr[k][l] = buffer;
+					}
 				}
 			}
 		}
